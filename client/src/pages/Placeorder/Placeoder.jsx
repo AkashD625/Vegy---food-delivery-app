@@ -1,9 +1,9 @@
 import React from 'react'
-import './Placeceoder'
+import './Placeorder.css'
 function Placeoder() {
   return (
     <div>
-      
+      <h1>Hello placeholder</h1>
     </div>
   )
 }
