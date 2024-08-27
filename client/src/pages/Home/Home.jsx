@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Home.css'
 import Header from '../../components/Navbar/Header/Header';
 import ExploreMenu from '../../components/Navbar/ExploreMenu/ExploreMenu';
+import FoodDisplay from '../../components/Navbar/FoodDisplay/FoodDisplay';
 
 function Home() {
 
@@ -11,6 +12,7 @@ function Home() {
    <>
    <Header/>
    <ExploreMenu category={category} setCategory={setCategory}/>
+   <FoodDisplay category={category}/>
    </>
   )
 }
