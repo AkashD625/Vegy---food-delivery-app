@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Cart" element={<Cart />} />
-          <Route path="/PLaceorder" element={<Placeoder />} />
+          <Route path="/order" element={<Placeoder />} />
         </Routes>
       </div>
       <Footer />
