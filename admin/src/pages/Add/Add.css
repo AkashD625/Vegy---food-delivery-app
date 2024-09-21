@@ -12,7 +12,7 @@
 .add-img-upload img{
      width: 120px;
 }
-.add-product-name .add-product-description{
+.add-product-name, .add-product-description{
 width: max(40%,280px);
 }
 
