@@ -7,6 +7,7 @@ import Placeoder from "./pages/Placeorder/Placeoder";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Navbar/Footer/Footer";
 import LoginPopup from "./components/Navbar/LoginPopup/LoginPopup";
+import Verify from "./pages/Verify/Verify";
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/order" element={<Placeoder />} />
+          <Route path='/verify' element={<Verify />} />
         </Routes>
       </div>
       <Footer />

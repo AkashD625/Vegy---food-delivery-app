@@ -7,6 +7,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 //placing user order from forontend
 const placeOrder = async(req,res)=>{
+      const frontend_url = 'http://localhost:3000'; // or the correct port
+
 
       try {
             const newOrder = new orderModel({
@@ -45,12 +47,34 @@ const placeOrder = async(req,res)=>{
    const session = await stripe.checkout.sessions.create({
       line_items:line_items,
       mode:'payment',
-      
+      success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
+      cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`
    })
 
+   res.json({success:true,session_url:session.url})
+
       } catch (error) {
-            
+           console.log(error)
+           res.json({success:false,message:"Error"}) 
       }
 }
 
-export {placeOrder}
+
+const verifyOrder = async(req,res)=>{
+ const {orderId,success} = req.body;
+ try {
+      if (success=="true") {
+          await orderModel.findByIdAndUpdate  (orderId,{payment:true});
+          res.json({success:true,message:"paid"})
+      }
+      else{
+            await orderModel.findByIdAndDelete(orderId);
+            res.json({success:false,message:"Not paid"})
+      }
+ } catch (error) {
+      console.log(error);
+      res.json({success:false,message:"Error"})
+ }
+}
+
+export {placeOrder,verifyOrder}
