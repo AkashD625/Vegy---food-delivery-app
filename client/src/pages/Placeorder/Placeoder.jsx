@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Placeorder.css";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Placeoder = () => {
   const {getTotalCartAmount,token,food_list,cartItems,url} = useContext(StoreContext);
 
@@ -52,6 +53,17 @@ else{
   alert("Something went wrong on your side");
 }
 }
+
+
+const navigate = useNavigate();
+useEffect(()=>{
+  if (!token) {
+    navigate('/cart')
+  }
+  else if(getTotalCartAmount()===0){
+    navigate('/cart')
+  }
+})
 
 
 

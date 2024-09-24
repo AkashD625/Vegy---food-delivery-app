@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Navbar/Footer/Footer";
 import LoginPopup from "./components/Navbar/LoginPopup/LoginPopup";
 import Verify from "./pages/Verify/Verify";
+import MyOrder from "./pages/MyOrders/MyOrder";
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/Cart" element={<Cart />} />
           <Route path="/order" element={<Placeoder />} />
           <Route path='/verify' element={<Verify />} />
+          <Route path='/myorders' element={<MyOrder />} />
         </Routes>
       </div>
       <Footer />
