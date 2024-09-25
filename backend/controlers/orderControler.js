@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 //placing user order from forontend
 const placeOrder = async(req,res)=>{
-      const frontend_url = 'http://localhost:3000';
+      const frontend_url = 'https://vegy-admin.onrender.com';
        // or the correct port
         
 
