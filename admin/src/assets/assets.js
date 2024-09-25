@@ -14,4 +14,8 @@ export const assets ={
     parcel_icon
 }
 
+<<<<<<< HEAD
 export  const url = "https://vegy-food-delivery-web.onrender.com";
+=======
+export const url = "https://vegy-food-delivery-web.onrender.com";
+>>>>>>> a31b7359deebaac32474ca719b3781560b1dd172
