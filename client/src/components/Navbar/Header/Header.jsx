@@ -5,9 +5,9 @@ function Header() {
 <div className="header">
 
       <div className="header-contents">
-            <h2>Order your favourite food here</h2>
-            <p>Choose from diverse  for he main contenst on the the gain fot gothenm menu featuring a delectable array of dishes crafted withe the testy</p>
-            <button>View Menu</button>
+            <h2>Fresh ingredients delivered to your door in minutes!</h2>
+            <p>Oder Daily Ingredients For Making Food Here. Recive The Instant Delivery From The Nearest Store Of Your Area. Your favorite meals, made simple with instant ingredient delivery .Cook smarter, not harder—get the ingredients you need, fast!</p>
+            <button><a  href="#explore-menu">View Availablity</a></button>
       </div>
 </div>
   )

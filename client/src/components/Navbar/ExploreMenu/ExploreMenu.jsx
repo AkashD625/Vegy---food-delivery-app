@@ -6,9 +6,7 @@ function ExploreMenu({ category, setCategory }) {
     <div className="explore-menu" id="explore-menu">
       <h1>Explore Our menu</h1>
       <p className="explore-menu-text">
-        Chooose fromt hte diver menu featurojg jefbs sjdfsufhsd fissuhfiuefshfh
-        soeufuefhsjdfnuebf hfoiewhfowfh wof wfwiefjei hfofhowuefh fhufh oeuifh f
-        ewofio
+      Craving something new? Explore the menu and fuel your vibe!
       </p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
