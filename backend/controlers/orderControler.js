@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 //placing user order from forontend
 const placeOrder = async(req,res)=>{
-      const frontend_url = 'https://vegy-frontend.onrender.com';
+      const frontend_url = 'https://vegy-food-delivery-app-1.onrender.com';
        // or the correct port
         
 
