@@ -15,4 +15,4 @@ export const assets = {
 };
 
 // Ensure only one url is exported
-export const url = "https://vegy-food-delivery-web.onrender.com";
+export const url = "https://vegy-food-delivery-app.onrender.com";
